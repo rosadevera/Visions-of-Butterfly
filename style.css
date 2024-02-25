@@ -1,0 +1,171 @@
+body {
+    background: radial-gradient(ellipse, white, black);
+    height: 100%; /* Adjust height as needed */
+}
+
+header {
+    /* background-color: white; */
+    display: flex;
+    height: fit-content;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    text-align: center;
+    /* border: 3px solid rgb(255, 0, 0); */
+    position: relative; /* Set position to relative */
+}
+
+.header-left {
+    flex: 1;
+    /* Expand to fill available space */
+    /* border: 3px solid rgb(255, 0, 0); */
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Set higher z-index to keep it above the pseudo-element */
+}
+
+.header-right {
+    flex: 1;
+    /* Expand to fill available space */
+    text-align: right;
+    /* Align content to the right */
+    /* border: 3px solid rgb(255, 0, 0); */
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Set higher z-index to keep it above the pseudo-element */
+}
+
+.header-left img {
+    height: auto;
+    width: 15vw;
+    float: left;
+    filter: drop-shadow(0px 0px 7px #ffffff);
+    position: relative; /* Set position to relative */
+    z-index: 2; /* Set higher z-index to keep it above the pseudo-element */
+}
+
+.header-right img {
+    height: auto;
+    width: 20vw;
+    float: right;
+    filter: drop-shadow(0px 0px 7px #ffffff);
+    position: relative; /* Set position to relative */
+    z-index: 2; /* Set higher z-index to keep it above the pseudo-element */
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Adjust this value to control the extension */
+    left: -20px; /* Offset to eliminate the gap */
+    width: calc(100% + 40px); /* Adjusted width to compensate for the offset */
+    border-bottom: 1.5rem solid white;
+    z-index: 0; /* Set lower z-index to position it below other content */
+}
+
+.target {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big {
+    border: 3px solid black;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* .big:hover {
+   transition: ease-in-out 1s;
+   background-color: black;
+} */
+
+.medium {
+    border: 3px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* .medium:hover {
+    transition: ease-in-out 1s;
+    background-color: white;
+ } */
+
+ .small {
+    border: 3px solid black;
+    position: absolute;
+    top: 19%;
+    left: 19%;
+    transform: translate(-50%, -50%); /* Adjusted position */
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    z-index: 10;
+    overflow: hidden;
+    animation: spin 20s linear infinite;
+    transform-origin: center;
+}
+
+.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact {
+    color:white;
+    padding: 70px;
+    display:flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 896px) {
+    .header-left img {
+        height: auto;
+        width: 35vw;
+        float: left;
+        filter: drop-shadow(0px 0px 7px #ffffff);
+    }
+    
+    .header-right img {
+        height: auto;
+        width: 50vw;
+        float: right;
+        padding-right: 3vw;
+        filter: drop-shadow(0px 0px 7px #ffffff);
+    }
+
+    .big {
+        border: 4px solid black;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .target {
+        padding-top: 150px;
+    }
+}
