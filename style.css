@@ -19,7 +19,6 @@ a {
 }
 
 header {
-    /* background-color: white; */
     display: flex;
     height: fit-content;
     padding-left: 2vw;
@@ -27,14 +26,14 @@ header {
     padding-top: 2vh;
     text-align: center;
     /* border: 3px solid rgb(255, 0, 0); */
-    position: relative; /* Set position to relative */
+    position: relative; 
 }
 
 .header-left {
     flex: 1;
     /* Expand to fill available space */
     /* border: 3px solid rgb(255, 0, 0); */
-    position: relative; /* Set position to relative */
+    position: relative; 
     z-index: 1; /* Set higher z-index to keep it above the pseudo-element */
 }
 
@@ -44,7 +43,7 @@ header {
     text-align: right;
     /* Align content to the right */
     /* border: 3px solid rgb(255, 0, 0); */
-    position: relative; /* Set position to relative */
+    position: relative;
     z-index: 1; /* Set higher z-index to keep it above the pseudo-element */
 }
 
@@ -53,7 +52,7 @@ header {
     width: 15vw;
     float: left;
     filter: drop-shadow(0px 0px 7px #ffffff);
-    position: relative; /* Set position to relative */
+    position: relative; 
     z-index: 2; /* Set higher z-index to keep it above the pseudo-element */
 }
 
@@ -62,7 +61,7 @@ header {
     width: 20vw;
     float: right;
     filter: drop-shadow(0px 0px 7px #ffffff);
-    position: relative; /* Set position to relative */
+    position: relative; 
     z-index: 2; /* Set higher z-index to keep it above the pseudo-element */
     transition: cubic-bezier(0.165, 0.84, 0.44, 1)0.5s;
 }
@@ -88,6 +87,7 @@ header::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(0px 0px 1px black);
 }
 
 .big {
@@ -175,6 +175,7 @@ header::after {
     font-style: normal;
     font-size: 3rem;
     letter-spacing: .25rem;
+    filter: drop-shadow(0px 0px 2px #ffffff);
 }
 
 .contact.animate {
