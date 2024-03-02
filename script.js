@@ -1,22 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the fairy image element
-    const fairyImage = document.querySelector('.header-right img');
-  
-    // Add click event listener to the fairy image
-    fairyImage.addEventListener('click', () => {
-      // Get the speech div
-      const speechDiv = document.querySelector('.speech');
-  
-      // Remove the 'hidden' class from the speech div to reveal it
-      if (speechDiv) {
-        speechDiv.classList.remove('hidden');
-        
-        // Set a timeout to add the 'hidden' class back after 10 seconds
-        setTimeout(() => {
-          speechDiv.classList.add('hidden');
-        }, 7000); // 10 seconds in milliseconds
-      }
+  // Get the .header-right element
+  const headerRight = document.querySelector('.header-right');
+
+    // Add click event listener to the header-right div
+    headerRight.addEventListener('click', () => {
+        // Play the MP3 file
+        const audio = new Audio('media/metamorphosex.mp3');
+        audio.play();
     });
+
+
+  // Add click event listener to the .header-right element
+  headerRight.addEventListener('click', () => {
+    // Get the speech div
+    const speechDiv = document.querySelector('.speech');
+
+    // Remove the 'hidden' class from the speech div to reveal it
+    if (speechDiv) {
+      speechDiv.classList.remove('hidden');
+      
+      // Set a timeout to add the 'hidden' class back after 10 seconds
+      setTimeout(() => {
+        speechDiv.classList.add('hidden');
+      }, 10000); // 10 seconds in milliseconds
+    }
+  });
 });
 
 
