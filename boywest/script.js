@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the #tag section
     const tagSection = document.querySelector('#tag');
     
-    // Get the button
-    const button = document.querySelector('.pricecontainer button');
-
     // Function to check if element is in viewport
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -68,10 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleScroll() {
         if (isInViewport(tagSection)) {
             tagSection.classList.add('animate');
-            window.removeEventListener('scroll', handleScroll);
-        }
-        if (isInViewport(button)) {
-            button.classList.add('animate');
             window.removeEventListener('scroll', handleScroll);
         }
     }
