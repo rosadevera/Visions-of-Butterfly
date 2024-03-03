@@ -4,6 +4,7 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     margin-top:20px;
+    overflow-x: hidden;
 }
 
 @keyframes fadeInAnimation {
@@ -70,13 +71,13 @@ p {
     width: fit-content;
     align-items: center; /* Align items vertically */
     filter: drop-shadow(0px 0px 10px white);
-    /* border: 1px solid red; */
+    /* border: 3px solid red; */
 }
 
 .container img {
-    height:120vh;
+    height:900px;
     width: fit-content;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(38, 0, 255); */
 }
 
 
@@ -127,45 +128,11 @@ li {
     font-size: 1.5rem;
 }
 
-.boywest {
-    font-size: 2rem;
-    position: absolute;
-    top:250px;
-}
-
-.cowboy {
-    position: absolute;
-    top:350px;
-    left:500px;
-    width:150px;
-}
-
-.go-west {
-    position: absolute;
-    top:450px;
-    left:150px;
-}
-
-.go-walk {
-    position: absolute;
-    top:525px;
-    left:400px;
-    width:200px;
-}
-
-.walk-aways {
-    position: absolute;
-    top:650px;
-    left:200px;
-    width:300px;
-}
-
 #tag {
     position: absolute;
-    bottom:75px;
-    left: 400px;
+    top:825px;
+    left:500px;
     opacity: 0; /* Initially hidden */
-    position: relative; /* Add position relative for proper animation */
     /* border: 1px solid red; */
 }
 
@@ -185,7 +152,8 @@ li {
     height: fit-content; /* Adjust height as needed */
     /* border: 1px solid red; */
     margin:auto;
-    margin-bottom:50px;
+    margin-top:50px;
+    margin-bottom:70px;
     width:fit-content;
 }
 
@@ -238,18 +206,18 @@ button:hover {
 
 @media only screen and (max-width: 768px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        height: 750px;
+        width: fit-content;
         justify-content: center; /* Horizontally center */
         align-items: center; /* Vertically center */
-        height: 105vh; /* Adjust height as needed */
-        width:90vw;
+        margin: auto;
+        margin-left:10px;
+        overflow-x: hidden;
     }
     
     .container img {
-        position: absolute;
-        height: fit-content;
-        width: 425px;
+        height:450px;
+        width: fit-content;
     }
 
     ul {
@@ -262,7 +230,7 @@ button:hover {
     }
 
     .numbers {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
         line-height: 2;
         margin: 10px auto;
     }
@@ -271,66 +239,26 @@ button:hover {
         font-size: 0.75rem;
     }
 
+    .pricecontainer {
+        margin-top:unset;
+        margin-bottom:unset;
+    }
+
     button {
         background-color: white; 
         filter: drop-shadow(0px 0px 5px white);
-        font-size: 1.25rem;
-        margin: 0rem;
+        font-size: 1rem;
+        margin-bottom:20px;
     }
 
     button a {
         color: black;
     }
 
-    p {
-        font-family: "Director-regular";
-        /* font-style: italic; */
-        font-weight: 300;
-        font-size: 1rem;
-    
-        color:white;
-        text-align: center;
-    }
-    
-    .boywest {
-        font-size: 1.75rem;
-        position: absolute;
-        top:275px;
-        left:unset;
-    }
-    
-    .cowboy {
-        position: absolute;
-        top:375px;
-        left:unset;
-        width: unset;
-    }
-    
-    .go-west {
-        position: absolute;
-        top:425px;
-        left:unset;
-    }
-    
-    .go-walk {
-        position: absolute;
-        top:475px;
-        left:unset;
-        width: unset;
-    }
-    
-    .walk-aways {
-        position: absolute;
-        top:525px;
-        left:unset;
-        width: unset;
-    }
-
     #tag {
-        position: absolute;
         opacity: unset;
-        top:600px;
-        left:unset;
+        top:555px;
+        left:240px;
     }
     
     #tag img {
