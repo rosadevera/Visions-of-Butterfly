@@ -204,22 +204,6 @@ button:hover {
 
 
 @media only screen and (max-width: 768px) {
-    .container {
-        height: 775px;
-        width: fit-content;
-        align-items: flex-end; /* Align items vertically */
-        justify-content: center; /* Horizontally center */
-        align-items: center; /* Vertically center */
-        
-        margin: auto;
-        margin-left:10px;
-    }
-    
-    .container img {
-        height: fit-content;
-        width: 400px;
-    }
-
     ul {
         top:30px;
     }
@@ -238,6 +222,37 @@ button:hover {
     .name {
         font-size: 0.75rem;
     }
+    
+    .container {
+        height: 775px;
+        width: fit-content;
+        align-items: flex-end; /* Align items vertically */
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        
+        margin: auto;
+        margin-left:10px;
+    }
+    
+    .container img {
+        height: fit-content;
+        width: 400px;
+    }
+
+    #tag {
+        opacity: unset;
+        top:50vh;
+        left:240px;
+    }
+    
+    #tag img {
+        width: 140px;
+        height: fit-content;
+    }
+
+    #tag.animate {
+        animation: unset;
+    }
 
     .pricecontainer {
         margin-top:unset;
@@ -255,18 +270,4 @@ button:hover {
         color: black;
     }
 
-    #tag {
-        opacity: unset;
-        top:62vh;
-        left:240px;
-    }
-    
-    #tag img {
-        width: 140px;
-        height: fit-content;
-    }
-
-    #tag.animate {
-        animation: unset;
-    }
 }
