@@ -206,7 +206,7 @@ button:hover {
 
 @media only screen and (max-width: 768px) {
     .container {
-        height: 750px;
+        /* Remove fixed height */
         width: fit-content;
         justify-content: center; /* Horizontally center */
         align-items: center; /* Vertically center */
@@ -216,7 +216,7 @@ button:hover {
     }
     
     .container img {
-        height:450px;
+        height:auto; /* Allow image height to adjust */
         width: fit-content;
     }
 
@@ -269,5 +269,4 @@ button:hover {
     #tag.animate {
         animation: unset;
     }
-
 }
