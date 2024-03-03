@@ -205,10 +205,12 @@ button:hover {
 
 @media only screen and (max-width: 768px) {
     .container {
-        height:775px;
+        height: 775px;
         width: fit-content;
+        align-items: flex-end; /* Align items vertically */
         justify-content: center; /* Horizontally center */
         align-items: center; /* Vertically center */
+        
         margin: auto;
         margin-left:10px;
     }
