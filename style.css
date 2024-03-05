@@ -273,7 +273,7 @@ header::after {
     }
 
     .speechcontainer {
-        top: 15vh;
+        top: 16vh;
         right: 10vw;
         animation:fadeInUp 1s ease backwards;
     }
