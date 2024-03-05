@@ -2,20 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get the .header-right element
   const headerRight = document.querySelector('.header-right');
 
-    // Add click event listener to the header-right div
-    headerRight.addEventListener('click', () => {
-        // Play the MP3 file
-        const audio = new Audio('media/metamorphosex.mp3');
-        audio.play();
-    });
+  // Track the number of clicks
+  let clickCount = 0;
 
-
-  // Add click event listener to the .header-right element
+  // Add click event listener to the .header-right div
   headerRight.addEventListener('click', () => {
-    // Get the speech div
-    const speechDiv = document.querySelector('.speech');
+    // Increment clickCount
+    clickCount++;
 
-    // Remove the 'hidden' class from the speech div to reveal it
+    // Play the appropriate audio file based on the click count
+    let audioFile = '';
+    if (clickCount === 1) {
+      audioFile = 'media/metamorphosex.mp3';
+    } else if (clickCount === 2) {
+      audioFile = 'media/a change agency.mp3';
+    }
+    const audio = new Audio(audioFile);
+    audio.play();
+
+    // Show the appropriate speech div based on the click count
+    const speechDiv = document.querySelector('.speech' + clickCount);
     if (speechDiv) {
       speechDiv.classList.remove('hidden');
       
@@ -24,8 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
         speechDiv.classList.add('hidden');
       }, 10000); // 10 seconds in milliseconds
     }
+    
+    // If it's the first click, show the first speech div explicitly
+    if (clickCount === 1) {
+      const firstSpeechDiv = document.querySelector('.speech1');
+      if (firstSpeechDiv) {
+        firstSpeechDiv.classList.remove('hidden');
+      }
+    }
   });
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

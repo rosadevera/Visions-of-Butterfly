@@ -201,11 +201,11 @@ header::after {
     }
 }
 
-
-.speech {
+.speechcontainer {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    /* top: 22vh; Adjust as needed */
-    right: 7vw; /* Center horizontally */
+    right: 7vw; 
     animation:fadeInUp 1s ease backwards;
 }
 
@@ -218,14 +218,16 @@ header::after {
     display: none; /* Hide the element */
 }
 
-.speech img {
+.speech1 img {
     width: 300px;
     height: auto;
+    animation:fadeInUp 1s ease backwards;
 }
 
 .speech2 img {
     width: 300px;
     height: auto;
+    animation:fadeInUp 1s ease backwards;
 }
 
 
@@ -269,13 +271,23 @@ header::after {
         letter-spacing: 1.15;
     }
 
-    .speech {
-        top: 18vh; /* Adjust as needed */
+    .speechcontainer {
+        top: 18vh;
         right: 10vw;
+        animation:fadeInUp 1s ease backwards;
     }
+
     
-    .speech img {
+    .speech1 img {
         width: 170px;
         height: auto;
+        animation:fadeInUp 1s ease backwards;
     }
+    
+    .speech2 img {
+        width: 170px;
+        height: auto;
+        animation:fadeInUp 1s ease backwards;
+    }
+    
 }
