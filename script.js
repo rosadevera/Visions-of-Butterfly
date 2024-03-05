@@ -38,8 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
         firstSpeechDiv.classList.remove('hidden');
       }
     }
+
+    // Reset clickCount if it reaches 2
+    if (clickCount === 2) {
+      clickCount = 0;
+    }
   });
 });
+
 
 
 
