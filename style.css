@@ -208,7 +208,6 @@ header::after {
     right: 7vw; 
     animation:fadeInUp 1s ease backwards;
     z-index: 9999;
-    border: 1px solid red;
 }
 
 @keyframes fadeInUp{
@@ -224,14 +223,12 @@ header::after {
     width: 300px;
     height: auto;
     animation:fadeInUp 1s ease backwards;
-    border: 1px solid red;
 }
 
 .speech2 img {
     width: 300px;
     height: auto;
     animation:fadeInUp 1s ease backwards;
-    border: 1px solid red;
 }
 
 
@@ -276,7 +273,7 @@ header::after {
     }
 
     .speechcontainer {
-        top: 18vh;
+        top: 15vh;
         right: 10vw;
         animation:fadeInUp 1s ease backwards;
     }
