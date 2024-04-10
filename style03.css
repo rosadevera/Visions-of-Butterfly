@@ -176,3 +176,10 @@ a {
     text-decoration: none;
     transition: ease-in-out 1s;
 }
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-y: visible;
+    }
+}
