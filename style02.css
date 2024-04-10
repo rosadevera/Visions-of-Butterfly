@@ -251,6 +251,12 @@ button:hover {
         width: 400px;
     }
 
+    .collapse img {
+        max-height: 775px;
+        width: fit-content;
+    }
+
+
     #tag {
         opacity: unset;
         top:55vh;
