@@ -88,6 +88,19 @@ header::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: red solid 1px; */
+}
+
+.tomato img {
+    position: absolute;
+    height:350px;
+    top: 7vh;
+    left: 15vw;
+    z-index: 999;
+}
+
+.tomato img:hover {
+    cursor: pointer;
 }
 
 
@@ -233,6 +246,10 @@ header::after {
 
 
 @media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     .header-left img {
         height: auto;
         width: 40vw;
@@ -242,6 +259,7 @@ header::after {
         height: auto;
         width: 50vw;
         padding-right: 0vw;
+        z-index: 999;
     }
 
     .header-right img:hover {
@@ -291,4 +309,11 @@ header::after {
         animation:fadeInUp 1s ease backwards;
     }
     
+    .tomato img {
+        height:260px;
+        top: 5vh;
+        left: 40vw;
+    }
+
 }
+
