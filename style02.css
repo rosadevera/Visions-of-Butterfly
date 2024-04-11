@@ -252,8 +252,8 @@ button:hover {
     }
 
     .collapse img {
-        max-height: 775px;
-        width: fit-content;
+        height: fit-content;
+        width: 400px;
     }
 
 

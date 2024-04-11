@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    position: fixed; /* Position the container */
+    position: absolute; /* Position the container */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     width: 100vw; /* Take up the entire viewport width */
