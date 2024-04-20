@@ -231,7 +231,7 @@ button:hover {
     }
     
     .container {
-        top: 15vh;
+        top: 20vh;
         height: fit-content;
         width: fit-content;
         align-items: flex-end; /* Align items vertically */
@@ -248,7 +248,7 @@ button:hover {
 
     #tag {
         opacity: unset;
-        top:350px;
+        top:100px;
         left:240px;
     }
     
@@ -262,7 +262,7 @@ button:hover {
     }
 
     .pricecontainer {
-        margin-top:200px;
+        margin-top:250px;
         margin-bottom:unset;
     }
 
