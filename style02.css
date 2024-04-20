@@ -77,9 +77,11 @@ p {
 }
 
 .rug img {
-    height:900px;
-    width: fit-content;
+    height: 100vh; /* Adjust the percentage as needed */
+    width: auto; /* Allow the width to adjust automatically */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
 }
+
 
 ul {
     position: absolute;
@@ -131,7 +133,7 @@ li {
 
 #tag {
     position: absolute;
-    top:825px;
+    top:700px;
     left:500px;
     opacity: 0; /* Initially hidden */
     /* border: 1px solid red; */
@@ -154,8 +156,8 @@ li {
     height: fit-content; /* Adjust height as needed */
     /* border: 1px solid red; */
     margin:auto;
-    /* margin-top:50px;
-    margin-bottom:70px; */
+    margin-top:100px;
+    margin-bottom:70px;
     width:fit-content;
 }
 
@@ -239,10 +241,10 @@ button:hover {
     }
 
     .rug img {
-        height: fit-content;
-        width: 400px;
-    }
-
+        height: auto; /* Adjust the percentage as needed */
+        width: 90vw; /* Allow the width to adjust automatically */
+        max-width: 100%; /* Ensure the image doesn't exceed its original size */
+    }    
 
     #tag {
         opacity: unset;
@@ -260,7 +262,7 @@ button:hover {
     }
 
     .pricecontainer {
-        margin-top:500px;
+        margin-top:200px;
         margin-bottom:unset;
     }
 
