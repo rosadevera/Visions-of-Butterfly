@@ -132,7 +132,7 @@ var countdown = function() {
             clockType = 'break';
             clockTime = breakTime;
             // Play sound effect
-            var audio = new Audio('./bell1.mp3');
+            var audio = new Audio('./media/harp.mp3');
             audio.play();
             // Change background color with smooth transition
             $('body').css({
@@ -144,7 +144,7 @@ var countdown = function() {
             clockType = 'session';
             clockTime = sessionTime;
             // Play sound effect
-            var audio = new Audio('./bell1.mp3');
+            var audio = new Audio('./media/harp.mp3');
             audio.play();
             // Revert back to original background radial gradient with smooth transition
             $('body').css({
