@@ -19,7 +19,10 @@
 
     <div class="container">
 	
-        <h1><span>What do you want to achieve today?</span></h1>
+        <h1><span>My declared intent is 
+            <br>
+            <input type="text" id="fname" name="fname" placeholder="write your intent...">
+        </span></h1>
     
         <div id="controls">
             <div id="session-timer" class="controls-block">
@@ -36,15 +39,20 @@
             </div>	
         </div>
     
-        <div id="clock-container" >
+        <div class="clock">
+        <div id="clock-container">
             <div id="inner"></div>
     
             <div id="clock-content">
-                <div id="clock-label">Session</div>
+                <!-- <div id="clock-label">Session</div> -->
                 <div id="clock-counter">25</div>
                 <button id="clock-button">Start</button>
                 <button id="reset-button" disabled>Reset</button>
             </div>
+        </div>
+        <div class="stem">
+            <img src="./media/starstem.png">
+        </div>
         </div>
     
     </div>

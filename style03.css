@@ -15,22 +15,21 @@
 
 
 body {
-	background: radial-gradient(ellipse, white, #ffa3b4, rgb(96, 0, 0));
+    background: radial-gradient(ellipse, white, #ffa3b4, rgb(96, 0, 0));
     height: 100vh; 
     overflow-x: hidden;
     overflow-y: hidden;
-
-	/* color: white; */
-	font-family: "Helvetica-neue", sans-serif;
+    font-family: "Helvetica-neue", sans-serif;
     font-weight: lighter;
     font-size: 0.75rem;
     letter-spacing: 0;
     line-height: 2;
-	text-align: center;
+    text-align: center;
+    transition: background 2s ease-in-out; /* Add transition property here */
 }
 
 .container {
-    position: absolute; /* Position the container */
+    position: relative; /* Position the container */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     width: 100vw; /* Take up the entire viewport width */
@@ -60,6 +59,10 @@ button {
 	outline: none;
 	/* color: white; */
 	font-size: 1.3em;
+}
+
+button:hover{
+    cursor:pointer;
 }
 
 button:disabled {
@@ -93,6 +96,25 @@ button:disabled {
 	vertical-align: bottom;
 }
 
+.stem {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left:120px;
+    z-index: 1; /* Set a higher z-index to place it on top of the clock container */
+}
+
+.stem img {
+    width:65px;
+    top:0px;   
+}
+
+.clock {
+    position: relative;
+    width:fit-content;
+    height: fit-content;
+    align-items: center;
+}
+
 #clock-container {
 	margin-top: 50px;
 	margin-left: auto;
@@ -105,6 +127,7 @@ button:disabled {
 	display: table;
 	overflow: hidden;
 	position: relative;
+    z-index: 0;
 }
 
 #clock-content {
@@ -177,6 +200,19 @@ a {
     transition: ease-in-out 1s;
 }
 
+input[type="text"] {
+    border: none;
+    background: none;
+    font-family: "Pinyon Script", cursive; 
+    text-align: center;
+    font-size: 3rem; /* Match the font size */
+    font-weight: 400; /* Match the font weight */
+    font-style: normal; /* Match the font style */
+    line-height: 0; /* Align vertically with the text above */
+    margin-top: -20px; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    outline: none; /* Remove the focus outline */
+}
 
 @media only screen and (max-width: 768px) {
     body {

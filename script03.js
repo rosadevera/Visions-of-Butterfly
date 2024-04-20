@@ -116,28 +116,46 @@ $('document').ready(function() {
 
 
 	//Timer function. When the session time runs out, switch to break time,
-	//and vice-versa.
-	var countdown = function() {
-		if (clockTime > 0 && clockRunning) {
-			clockTime -= 1;
-			updateClockCounter();
-			if (clockType === 'session') {
-				updateProgress(clockTime / sessionTime * 100);		
-			} else {
-				updateProgress(clockTime / breakTime * 100);
-			}
-		} else if (clockTime === 0 && clockRunning) {
-			if (clockType === 'session') {
-				$('#clock-label').text('Break');
-				clockType = 'break';
-				clockTime = breakTime;
-			} else if (clockType === 'break') {
-				$('#clock-label').text('Session');
-				clockType = 'session';
-				clockTime = sessionTime;
-			}
-		}
-	};
+//and vice-versa.
+var countdown = function() {
+    if (clockTime > 0 && clockRunning) {
+        clockTime -= 1;
+        updateClockCounter();
+        if (clockType === 'session') {
+            updateProgress(clockTime / sessionTime * 100);      
+        } else {
+            updateProgress(clockTime / breakTime * 100);
+        }
+    } else if (clockTime === 0 && clockRunning) {
+        if (clockType === 'session') {
+            $('#clock-label').text('Break');
+            clockType = 'break';
+            clockTime = breakTime;
+            // Play sound effect
+            var audio = new Audio('./bell1.mp3');
+            audio.play();
+            // Change background color with smooth transition
+            $('body').css({
+                'background': 'radial-gradient(ellipse, white, #d6de7b, #929d16)',// Change to desired radial gradient
+                'transition': 'background 2s ease-in-out' // Smooth transition
+            });
+        } else if (clockType === 'break') {
+            $('#clock-label').text('Session');
+            clockType = 'session';
+            clockTime = sessionTime;
+            // Play sound effect
+            var audio = new Audio('./bell1.mp3');
+            audio.play();
+            // Revert back to original background radial gradient with smooth transition
+            $('body').css({
+                'background': 'radial-gradient(ellipse, white, #ffa3b4, rgb(96, 0, 0))', // Change to original radial gradient
+                'transition': 'background 2s ease-in-out' // Smooth transition
+            });
+        }
+    }
+};
+
+
 
 	//Start-Stop Click Handler
 	$('#clock-button').on('click', function() {
