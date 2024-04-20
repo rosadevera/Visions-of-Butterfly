@@ -203,6 +203,7 @@ a {
 input[type="text"] {
     border: none;
     background: none;
+    width: 100vw;
     font-family: "Pinyon Script", cursive; 
     text-align: center;
     font-size: 3rem; /* Match the font size */
@@ -212,10 +213,21 @@ input[type="text"] {
     margin-top: -20px; /* Remove default margins */
     padding: 0; /* Remove default padding */
     outline: none; /* Remove the focus outline */
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 @media only screen and (max-width: 768px) {
     body {
         overflow-y: visible;
+        overflow-x: hidden;
+    }
+
+    h1 span{
+        font-size: 2rem;
+    }
+
+    input[type="text"] {
+        font-size: 2rem;
     }
 }

@@ -260,6 +260,11 @@ button:hover {
         width: 400px;
     }
 
+    .rug img {
+        height: fit-content;
+        width: 400px;
+    }
+
 
     #tag {
         opacity: unset;
