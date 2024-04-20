@@ -55,6 +55,7 @@ p {
     text-align: center;
 }
 
+
 .countdown-container {
     display: flex;
     justify-content: center; /* Align items horizontally */
@@ -137,6 +138,7 @@ li {
     top: 25px;
     left: 25px;
     font-size: 1.5rem;
+    z-index: 999;
 }
 
 #tag {
@@ -179,6 +181,7 @@ button {
     font-size: 1.5rem;
     border-radius: 12px;
     transition: ease-in-out 1s;
+    z-index: 999;
 }
 
 
@@ -187,6 +190,7 @@ a {
     color: #ffffff;
     text-decoration: none;
     transition: ease-in-out 1s;
+    z-index: 999;
 }
 
 button a:hover {
@@ -259,7 +263,7 @@ button:hover {
 
     #tag {
         opacity: unset;
-        top:55vh;
+        top:57vh;
         left:240px;
     }
     

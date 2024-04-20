@@ -310,9 +310,10 @@ header::after {
     }
     
     .tomato img {
-        height:260px;
-        top: 5vh;
-        left: 40vw;
+        height:240px;
+        top: 6vh;
+        left: -10vw;
+        transform: scaleX(-1);
     }
 
 }
