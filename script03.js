@@ -69,50 +69,50 @@ $('document').ready(function() {
 	//Click Handlers for changing the break and session lengths.
 	//If the clock is running, don't allow the times to be changed.
 	$('#break-minus').on('click', function () {
-		//If the clock is running, don't allow the times to be changed.
+		// If the clock is running, don't allow the times to be changed.
 		if (clockRunning) {return;}
-
-		//Don't allow negative time values
+	
+		// Don't allow negative time values
 		if (breakTime > 0 && clockType === 'break') {
-			breakTime -= 60;
+			breakTime -= 300; // Decrease by 5 minutes (300 seconds)
 			clockTime = breakTime;
 			updateBreakIndicator();
 			updateClockCounter();
 		} else if (breakTime > 0) {
-			//Increment the time by one minute
-			breakTime -= 60;
+			// Increment the time by five minutes
+			breakTime -= 300;
 			updateBreakIndicator();
 		}
 	});
-
+	
 	$('#break-plus').on('click', function () {
 		if (clockRunning) {return;}
-
+	
 		if (clockType === 'break') {
-			breakTime += 60;
+			breakTime += 300; // Increase by 5 minutes (300 seconds)
 			clockTime = breakTime;
 			updateBreakIndicator();
 			updateClockCounter();
 		} else {
-			breakTime += 60;
+			breakTime += 300;
 			updateBreakIndicator();
 		}
 	});
-
+	
 	$('#session-minus').on('click', function () {
 		if (clockRunning) {return;}
-
+	
 		if (sessionTime > 0) {
-			sessionTime -= 60;
+			sessionTime -= 300; // Decrease by 5 minutes (300 seconds)
 			resetApp();
 		}
 	});
-
+	
 	$('#session-plus').on('click', function () {
 		if (clockRunning) {return;}
-		sessionTime += 60;
+		sessionTime += 300; // Increase by 5 minutes (300 seconds)
 		resetApp();
-	});
+	});	
 
 
 	//Timer function. When the session time runs out, switch to break time,
