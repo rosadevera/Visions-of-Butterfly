@@ -1,9 +1,9 @@
 body {
     background: black;
     margin: 0px;
+    padding:0px;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
-    margin-top:20px;
     overflow-x: hidden;
 }
 
@@ -46,135 +46,29 @@ body {
     src: url(../Director-Light.otf);
 }
 
-p {
-    font-family: "Director-regular";
-    font-weight: 300;
-    font-size: 1.5rem;
-
-    color:white;
-    text-align: center;
-}
-
-
-.countdown-container {
-    display: flex;
-    justify-content: center; /* Align items horizontally */
-    align-items: center; /* Align items vertically */
-    height: fit-content; /* Adjust height as needed */
-    filter: drop-shadow(0px 0px 10px white);
-}
-
-.container {
-    position:relative;
+.pagecontainer {
     display: flex;
     flex-direction: column;
-    margin:auto;
-    height: fit-content;
-    width: fit-content;
-    align-items: center; 
-    filter: drop-shadow(0px 0px 10px white);
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding: 25px;
     /* border: 2px solid red; */
 }
 
-.rug img {
-    height: 100vh; /* Adjust the percentage as needed */
-    width: auto; /* Allow the width to adjust automatically */
-    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+.pagecontainer img {
+    height:80vh;
+    filter: drop-shadow(0px 0px 2px #ffffff);
 }
 
-
-ul {
-    position: absolute;
-    top:180px;
-    
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-li {
-    display: inline-block;
-    margin-right: 1em;
+h1 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
     color: white;
+    filter: drop-shadow(0px 0px 2px #ffffff);
 }
-
-.numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: "Director-bold";
-    font-size: 2rem;
-    line-height: 2;
-    margin: 10px auto;
-}
-
-.name {
-    font-family: "Helvetica-neue", sans-serif;
-    font-weight: lighter;
-    font-size: 0.75rem;
-    letter-spacing: 0;
-    line-height: 2;
-
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    top: -25px;
-}
-
-.back {
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    font-size: 1.5rem;
-    z-index: 999;
-}
-
-#tag {
-    position: absolute;
-    top:700px;
-    left:500px;
-    opacity: 0; /* Initially hidden */
-    /* border: 1px solid red; */
-}
-
-#tag img {
-    height: 150px;
-    width: fit-content;
-}
-
-#tag.animate {
-    animation: fadeInUp2 1s ease forwards; /* Apply fade-in animation */
-}
-
-.pricecontainer {
-    position:relative;
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: fit-content; /* Adjust height as needed */
-    /* border: 1px solid red; */
-    margin:auto;
-    margin-top:100px;
-    margin-bottom:70px;
-    width:fit-content;
-}
-
-button {
-    background-color: transparent; 
-    border: 1px solid white;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    transition: ease-in-out 1s;
-    z-index: 999;
-}
-
 
 a {
     font-family: "Director-bold";
@@ -184,18 +78,12 @@ a {
     z-index: 999;
 }
 
-button a:hover {
-    color: black;
-    text-decoration: none;
-}
-
-.button.animate {
-    animation: fadeInUp2 1s ease forwards; /* Apply fade-in animation */
-}
-
-button:hover {
-    background-color: white; 
-    filter: drop-shadow(0px 0px 5px white);
+.back {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 1.5rem;
+    z-index: 999;
 }
 
 @keyframes fadeInUp2 {
@@ -211,70 +99,5 @@ button:hover {
 
 
 @media only screen and (max-width: 768px) {
-    ul {
-        top:30px;
-    }
-
-    li {
-        margin-right: 0rem;
-        width: 4em;
-    }
-
-    .numbers {
-        font-size: 1.6rem;
-        line-height: 2;
-        margin: 10px auto;
-    }
-
-    .name {
-        font-size: 0.75rem;
-    }
-    
-    .container {
-        top: 20vh;
-        height: fit-content;
-        width: fit-content;
-        align-items: flex-end; /* Align items vertically */
-        justify-content: center; /* Horizontally center */
-        align-items: center; /* Vertically center */
-        margin: auto;
-    }
-
-    .rug img {
-        height: auto; /* Adjust the percentage as needed */
-        width: 90vw; /* Allow the width to adjust automatically */
-        max-width: 100%; /* Ensure the image doesn't exceed its original size */
-    }    
-
-    #tag {
-        opacity: unset;
-        top:100px;
-        left:240px;
-    }
-    
-    #tag img {
-        width: 140px;
-        height: fit-content;
-    }
-
-    #tag.animate {
-        animation: unset;
-    }
-
-    .pricecontainer {
-        margin-top:250px;
-        margin-bottom:unset;
-    }
-
-    button {
-        background-color: white; 
-        filter: drop-shadow(0px 0px 5px white);
-        font-size: 1rem;
-        margin-bottom:50px;
-    }
-
-    button a {
-        color: black;
-    }
 
 }
