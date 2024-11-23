@@ -173,9 +173,9 @@ header::after {
 }
 
 
-.small:hover {
-    filter: drop-shadow(0px 0px 10px #ffffff);
-    transform: scale(1.5);
+.small:hover,
+.small:active {
+    filter: drop-shadow(0px 0px 100px black);
     background-color: black;
     cursor: pointer;
 }

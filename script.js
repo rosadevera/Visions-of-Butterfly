@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get the .header-right element
   const headerRight = document.querySelector('.header-right');
-
-  // Track the number of clicks
+  const smallElement = document.querySelector('.small'); // New for beep sound
   let clickCount = 0;
 
   // Add click event listener to the .header-right div
   headerRight.addEventListener('click', () => {
-    // Increment clickCount
     clickCount++;
 
     // Play the appropriate audio file based on the click count
@@ -44,35 +42,48 @@ document.addEventListener('DOMContentLoaded', function() {
       clickCount = 0;
     }
   });
-});
 
+  // Play the beep sound when hovering or holding down on .small
+  function playBeep() {
+    const audio = new Audio('./media/beep.mp3');
+    audio.play();
+  }
 
+  // Play the beep sound when hovering over .small
+  smallElement.addEventListener('mouseover', playBeep);
 
+  // Play the beep sound when holding down on .small
+  smallElement.addEventListener('mousedown', playBeep);
 
+  // Stop the beep sound when mouse is released (optional)
+  smallElement.addEventListener('mouseup', () => {
+    const audio = new Audio('./media/beep.mp3');
+    audio.pause();
+    audio.currentTime = 0; // Reset the sound
+  });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the .contact section
-    const contactSection = document.querySelector('.contact');
+  // Get the .contact section
+  const contactSection = document.querySelector('.contact');
 
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+  // Function to check if element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle scroll event
+  function handleScroll() {
+    if (isInViewport(contactSection)) {
+      contactSection.classList.add('animate');
+      window.removeEventListener('scroll', handleScroll);
     }
+  }
 
-    // Function to handle scroll event
-    function handleScroll() {
-        if (isInViewport(contactSection)) {
-            contactSection.classList.add('animate');
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
 });
